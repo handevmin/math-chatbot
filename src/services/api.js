@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://math-chatbot-bbebf43b55ca.herokuapp.com';
 
 export async function uploadImage(file) {
   const formData = new FormData();

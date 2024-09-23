@@ -6,7 +6,7 @@ function useChatbot() {
   const sendMessage = async (content) => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/ask-question/', {
+      const response = await fetch('https://math-chatbot-bbebf43b55ca.herokuapp.com/ask-question/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
