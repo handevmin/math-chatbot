@@ -78,11 +78,13 @@ function ChatInterface() {
       <div className="chat-interface">
         <ChatHistory messages={messages} />
         <div className="input-area">
-          <ImageUpload onFileSelect={handleFileSelect} />
           {selectedFile && (
             <SelectedFile file={selectedFile} onRemove={handleRemoveFile} />
           )}
-          <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
+          <div className="input-container">
+            <ImageUpload onFileSelect={handleFileSelect} />
+            <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
+          </div>
         </div>
       </div>
     </div>

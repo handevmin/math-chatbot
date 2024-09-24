@@ -4,7 +4,7 @@ export async function uploadImage(file) {
   const formData = new FormData();
   formData.append('file', file);
 
-  const response = await fetch(`${API_URL}/upload-image/`, {
+  const response = await fetch(`${API_URL}/upload-image`, {
     method: 'POST',
     body: formData,
   });
@@ -17,7 +17,7 @@ export async function uploadImage(file) {
 }
 
 export async function sendQuestion(question, imageData) {
-  const response = await fetch(`${API_URL}/ask-question/`, {
+  const response = await fetch(`${API_URL}/ask-question`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
