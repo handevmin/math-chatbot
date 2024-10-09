@@ -19,7 +19,7 @@ function ChatInterface() {
     if (initialQuestion) {
       handleSendMessage(initialQuestion);
     }
-  }, []);
+  }, [initialQuestion]);
 
   const handleSendMessage = async (text) => {
     if ((!text.trim() && !imageData) || isLoading) return;
